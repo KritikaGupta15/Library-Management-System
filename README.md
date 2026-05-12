@@ -20,8 +20,8 @@ A full-stack web application built with Django for managing library operations i
 1. Clone the repository:
    git clone https://github.com/KritikaGupta15/Library-Management-System.git
 
-2. Install dependencies:
-   pip install -r requirements.txt
+2. Install Django:
+   pip install django
 
 3. Run migrations:
    python manage.py migrate
