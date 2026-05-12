@@ -1,0 +1,14 @@
+{% extends 'base.html' %}  <!-- ✅ Extend base layout -->
+
+{% block content %}
+<div class="container mt-5">
+    <h2>📆 Borrow a Book</h2>
+    <p>You are borrowing: <strong>{{ book.book_name }}</strong></p>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success">Confirm Borrow</button>
+    </form>
+</div>
+{% endblock %}

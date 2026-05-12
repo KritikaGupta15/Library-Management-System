@@ -1,0 +1,40 @@
+<h2 class="text-center">📚 Available Books</h2>
+
+{% if books %}
+<table class="table table-striped mt-3">
+    <thead>
+        <tr>
+            <th>Book ID</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Publisher</th>
+            <th>Category</th>
+            <th>Published Date</th>
+            <th>Available Copies</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for book in books %}
+        <tr>
+            <td>{{ book.book_id }}</td>
+            <td>{{ book.book_name }}</td>
+            <td>{{ book.author}}</td>
+            <td>{{ book.publisher}}</td>
+            <td>{{ book.category}}</td>
+            <td>{{ book.published_date }}</td>
+            <td>{{ book.available_copies }}</td>
+            <td>
+                {% if user.is_staff %}
+                    <<a href="{% url 'edit_book' book.book_id %}" class="btn btn-warning btn-sm">✏️ Edit</a>
+                    <a href="{% url 'delete_book' book.book_id %}" class="btn btn-danger btn-sm">🗑️ Delete</a>
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+    <p class="text-center">No books available.</p>
+{% endif %}
+

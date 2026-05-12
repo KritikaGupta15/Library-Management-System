@@ -1,0 +1,26 @@
+<head>
+    </head>
+    <body>
+
+        <style>
+            .custom-navbar {
+                background-color: Pink !important;
+            }
+            .btn-primary {
+                background-color: Grey !important;
+                border-color: black !important;
+                color: White !important; /* Example: White text */
+            }
+            .btn-warning {
+                background-color: Grey !important;
+                border-color: black !important;
+                color: White !important; /* Example: White text */
+            }
+            .btn-danger {
+                background-color: Grey !important;
+                border-color: black !important;
+                color: White !important; /* Example: White text */
+            }
+        </style>
+    </body>
+</html>
